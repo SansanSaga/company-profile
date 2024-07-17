@@ -14,7 +14,7 @@ type Projects = {
 
 const Projects: FC<Projects> = ({ projects }) => {
   return (
-    <Container maxW={{base: "360px", md: "1920px"}} bgColor={"gray"} p={"40px"} alignContent={"center"} pb={"80px"}>
+    <Container maxW={{base: "360px", md: "1920px"}} bgColor={"gray"} p={{base: "20px", md: "40px"}} alignContent={"center"} pb={"80px"}>
       <Container 
         bgColor={"dimgray"} 
         textAlign={"center"} 

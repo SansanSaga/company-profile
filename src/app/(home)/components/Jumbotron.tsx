@@ -10,7 +10,7 @@ interface Jumbotron {
 const Jumbotron: FC<Jumbotron> = ({ title, desc, images }) => {
   return (
     <>
-      <Container maxW={{base: "360px", md: "1920px"}} bgColor={"black"} p={"40px"} >
+      <Container maxW={{base: "360px", md: "1920px"}} bgColor={"black"} p={{base: "20px", md: "40px"}} >
         <Grid
           templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)"}}
           gap={0}

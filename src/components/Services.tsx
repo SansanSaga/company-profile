@@ -23,7 +23,7 @@ const Services: FC<Service> = ({ services, button }) => {
   const RICHTEXT_OPTIONS: Options = {
     renderNode: {
       [BLOCKS.HEADING_1]: (node, children) => {
-        return <Text fontSize={{base: "24px", md: "48px"}} fontWeight={"semibold"} textColor={"white"}>{children}</Text>
+        return <Text fontSize={{base: "20px", md: "40px"}} fontWeight={"semibold"} textColor={"white"}>{children}</Text>
       },
       [BLOCKS.UL_LIST]: (node, children) => {
         return <UnorderedList color={"lightgrey"} spacing={"8px"}>{children}</UnorderedList>
@@ -35,8 +35,8 @@ const Services: FC<Service> = ({ services, button }) => {
   }
 
   return (
-    <Container maxW={{base: "360px", md: "1920px"}} bgColor={"black"} p={"48px"}>
-      <Text fontSize={{base: "36px", md: "72px"}} textColor={"white"}>Our Services</Text>
+    <Container maxW={{base: "360px", md: "1920px"}} bgColor={"black"} p={{base: "20px", md: "48px"}}>
+      <Text fontSize={{base: "32px", md: "64px"}} textColor={"white"}>Our Services</Text>
       <Grid templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)"}} my={"48px"}>
         <Container w={{base: "280px", md: "560px"}} h={{base: "300px", md: "600px"}} p={0} mb={{base: "20px", md: undefined}}>
           <Image

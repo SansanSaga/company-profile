@@ -6,7 +6,7 @@ import Link from 'next/link'
 const ReadMoreButton = () => {
   return (
     <Link href='/services'>
-      <Button>Read more</Button>
+      <Button>Services</Button>
     </Link>
   )
 }

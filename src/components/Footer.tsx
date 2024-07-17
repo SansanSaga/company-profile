@@ -4,9 +4,9 @@ import ShareButtons from './ShareButtons'
 
 const Footer = () => {
   return (
-    <Container maxW={{base: "360px", md: "1920px"}} bgColor={"lightgray"} px={"48px"} py={"20px"}>
-      <Grid templateColumns={"repeat(2, 1fr)"}>
-        <Grid templateColumns={"repeat(2, 1fr)"}>
+    <Container maxW={{base: "360px", md: "1920px"}} bgColor={"lightgray"} px={{base: "20px", md: "48px"}} py={"20px"}>
+      <Grid templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)"}}>
+        <Grid templateColumns={"repeat(2, 1fr)"} textAlign={"center"}>
           <Text fontSize={{base: "8px", md: "16px"}} alignSelf={"center"}>PT Azimuth Pastindo Mandiri</Text>
           <Box alignContent={"center"}>
             <Text fontSize={{base: "8px", md: "16px"}}>Jl. Inspeksi Kalimalang No.160,</Text>
@@ -15,7 +15,7 @@ const Footer = () => {
             <Text fontSize={{base: "8px", md: "16px"}}>Indonesia</Text>
           </Box>
         </Grid>
-        <Container textAlign={"right"} alignContent={"center"}>
+        <Container textAlign={"right"} alignContent={"center"} display={{base: "none", md:"block"}}>
           <ShareButtons title={"PT Azimuth"}/>
         </Container>
       </Grid>

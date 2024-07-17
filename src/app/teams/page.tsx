@@ -20,7 +20,7 @@ const teams = () => {
   }, []);
 
   return (
-    <Container maxW={{base: "360px", md: "1920px"}} bgColor={"black"} p={"48px"}>
+    <Container maxW={{base: "360px", md: "1920px"}} bgColor={"black"} p={{base: "20px", md: "48px"}}>
       <Text fontSize={{base: "24px", md: "48px"}} textColor={"white"} textAlign={"center"}>Our Experts</Text>
       <Grid templateColumns={{base: "repeat(1, 1fr)", md: `repeat(3, 1fr)`}} gap={{base: "20px", md: undefined}}>
         {teamMembers.map((member, index) => {

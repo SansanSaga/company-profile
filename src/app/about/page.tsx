@@ -7,7 +7,7 @@ const About = async () => {
   const abouts = await getAbout();
   
   return (
-    <Container maxW={{base: "360px", md: "1920px"}} bgColor={"black"} p={"40px"} alignContent={"center"} textAlign={"center"}>
+    <Container maxW={{base: "360px", md: "1920px"}} bgColor={"black"} p={{base: "20px", md: "40px"}} alignContent={"center"} textAlign={"center"}>
       <Text textColor={"white"} fontSize={{base: "8px", md: "16px"}}>COMPANY TIMELINE</Text>
       {abouts?.map((about, index) => {
         return (
