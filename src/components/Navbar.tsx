@@ -12,7 +12,7 @@ const Navbar = () => {
         <Grid templateColumns={"repeat(2, 1fr)"}>
           <Link href={"/"}>
             <Image w={{base: "16px", md: "32px"}} h={{base: "16px", md: "32px"}} 
-              src="/azimuth.png" alt='Logo' 
+              src="/surveillance-defense-svgrepo-com.svg" alt='Logo' 
             />
           </Link>
           <Flex alignItems={"center"} flexDirection={"row-reverse"} justifyContent={"space-evenly"}>
