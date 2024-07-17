@@ -12,14 +12,14 @@ const Overview: FC<HomeOverview> = ({overview}) => {
   const RICHTEXT_OPTIONS: Options = {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => {
-        return <Text textColor={"grey"} fontSize={"24px"}>{children}</Text>
+        return <Text textColor={"grey"} fontSize={{base: "14px", md: "24px"}}>{children}</Text>
       }
     }
   }
 
   return (
     <>
-      <Container maxW={"1920px"} bgColor={"black"} p={"48px"}>
+      <Container maxW={{base: "768px", md: "1920px"}} bgColor={"black"} p={{base: "24px", md: "48px"}}>
         <Divider mb={"40px"}/>
         <Grid templateColumns={"repeat(2, 1fr)"}>
           <Container w={"560px"} h={"600px"} p={0}>

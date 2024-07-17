@@ -8,7 +8,7 @@ const Footer = () => {
         <Grid templateColumns={"repeat(2, 1fr"}>
           <Text>PT Azimuth Pastindo Mandiri</Text>
           <Box>
-            <Text>Jl. Inspeksi Kalimalang No.160,</Text>
+            <Text>Jl. Inspeksi Kalimalang No.162,</Text>
             <Text>Gandasari, Cikarang Barat,</Text>
             <Text>Kab.Bekasi 17350, Jawa Barat,</Text>
             <Text>Indonesia</Text>

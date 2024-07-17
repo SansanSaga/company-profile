@@ -10,27 +10,27 @@ interface Jumbotron {
 const Jumbotron: FC<Jumbotron> = ({ title, desc, images }) => {
   return (
     <>
-      <Container maxW={"1920px"} bgColor={"red"} p={0}>
+      <Container maxW={{base: "768px", md: "1920px"}} bgColor={"red"} p={0}>
         <Grid
-          templateColumns={"repeat(2, 1fr)"}
+          templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)"}}
           gap={0}
         >
           <Box alignContent={"center"}>
-            <Text fontSize={"40px"} fontWeight={"semibold"} textColor={'white'}>{title}</Text>
-            <Text fontSize={"24px"} textColor={"white"} noOfLines={4}>{desc}</Text>
+            <Text fontSize={{base: "24px", md: "40px"}} fontWeight={"semibold"} textColor={'white'}>{title}</Text>
+            <Text fontSize={{base:"14px", md: "24px"}} textColor={"white"} noOfLines={4}>{desc}</Text>
           </Box>
           <Box>
             <Image
               src={`https://${images[0].fields.file.url}`}
               alt='konstruksi2'
               w={"100%"}
-              maxH={"400px"}
+              maxH={{base: "200px", md: "400px"}}
               objectFit={"cover"}
             />
           </Box>
         </Grid>
         <Grid
-          templateColumns={"repeat(2, 1fr)"}
+          templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)"}}
           gap={0}
         >
           {images.map((image, index) => {
@@ -41,7 +41,7 @@ const Jumbotron: FC<Jumbotron> = ({ title, desc, images }) => {
                     src={`https://${image.fields.file.url}`}
                     alt='konstruksi'
                     w={"100%"}
-                    maxH={"400px"}
+                    maxH={{base: "200px", md: "400px"}}
                     objectFit={"cover"}
                   />
                 </Box>
