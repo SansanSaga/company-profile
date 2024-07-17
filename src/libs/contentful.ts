@@ -56,7 +56,7 @@ export const getServices = async (banyak:number = 0) => {
       content_type: "ccServices",
     });
 
-    return response;
+    return response.items;
     
   } catch (error) {
     console.log(error); 

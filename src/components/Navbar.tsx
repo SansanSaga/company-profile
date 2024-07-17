@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <>
       {/* 1920px 2560px */}
-      <Container maxW={"1920px"} bgColor={"white"} zIndex={999}>
+      <Container maxW={"1920px"} bgColor={"white"} zIndex={999} >
         <Grid templateColumns={"repeat(2, 1fr)"}>
           <Link href={"/"}>
             <Image w={"32px"} h={"32px"} 

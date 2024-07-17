@@ -21,8 +21,11 @@ const Overview: FC<HomeOverview> = ({overview}) => {
     <>
       <Container maxW={{base: "768px", md: "1920px"}} bgColor={"black"} p={{base: "24px", md: "48px"}}>
         <Divider mb={"40px"}/>
-        <Grid templateColumns={"repeat(2, 1fr)"}>
-          <Container w={"560px"} h={"600px"} p={0}>
+        <Grid templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)"}}>
+          <Container alignContent={"center"}>
+            {documentToReactComponents(overview.fields.overview, RICHTEXT_OPTIONS)}
+          </Container>
+          <Container w={"560px"} h={"600px"} p={0} my={"24px"}>
             <Image 
               src={`https://${overview.fields.image.fields.file.url}`}
               alt='foto'
@@ -30,9 +33,6 @@ const Overview: FC<HomeOverview> = ({overview}) => {
               h={"100%"}
               w={"100%"}
             />
-          </Container>
-          <Container alignContent={"center"}>
-            {documentToReactComponents(overview.fields.overview, RICHTEXT_OPTIONS)}
           </Container>
         </Grid>
         <Divider mt={"40px"}/>

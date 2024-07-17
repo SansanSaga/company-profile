@@ -9,7 +9,7 @@ export default async function Home() {
   // if (!home?.jumbotron || !home?.projects || !home.services) {
   //   return
   // }
-  console.log(home?.services);
+  // console.log(home?.services);
 
   return (
     <>
