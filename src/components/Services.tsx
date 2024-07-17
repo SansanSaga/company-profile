@@ -23,22 +23,22 @@ const Services: FC<Service> = ({ services, button }) => {
   const RICHTEXT_OPTIONS: Options = {
     renderNode: {
       [BLOCKS.HEADING_1]: (node, children) => {
-        return <Text fontSize={"48px"} fontWeight={"semibold"} textColor={"grey"}>{children}</Text>
+        return <Text fontSize={{base: "24px", md: "48px"}} fontWeight={"semibold"} textColor={"white"}>{children}</Text>
       },
       [BLOCKS.UL_LIST]: (node, children) => {
         return <UnorderedList color={"lightgrey"} spacing={"8px"}>{children}</UnorderedList>
       },
       [BLOCKS.PARAGRAPH]: (node, children) => {
-        return <Text textColor={"grey"} my={"8px"}>{children}</Text>
+        return <Text textColor={"white"} my={"8px"}>{children}</Text>
       }
     }
   }
 
   return (
-    <Container maxW={"1920px"} bgColor={"black"} p={"48px"}>
-      <Text fontSize={"72px"} textColor={"grey"}>Our Services</Text>
-      <Grid templateColumns={"repeat(2, 1fr)"} my={"48px"}>
-        <Container w={"560px"} h={"600px"} p={0}>
+    <Container maxW={{base: "360px", md: "1920px"}} bgColor={"black"} p={"48px"}>
+      <Text fontSize={{base: "36px", md: "72px"}} textColor={"white"}>Our Services</Text>
+      <Grid templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)"}} my={"48px"}>
+        <Container w={{base: "280px", md: "560px"}} h={{base: "300px", md: "600px"}} p={0} mb={{base: "20px", md: undefined}}>
           <Image
             src={`https://${services[0].fields.image.fields.file.url}`}
             alt='service'
@@ -53,12 +53,12 @@ const Services: FC<Service> = ({ services, button }) => {
         </Container>
       </Grid>
       <Divider />
-      <Grid templateColumns={"repeat(2, 1fr)"} my={"48px"}>
+      <Grid templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)"}} my={"48px"}>
         <Container alignContent={"center"}>
           {documentToReactComponents(services[1].fields.isi, RICHTEXT_OPTIONS)}
           {button ? (<ReadMoreButton />) : undefined}
         </Container>
-        <Container w={"560px"} h={"600px"} p={0}>
+        <Container w={{base: "280px", md: "560px"}} h={{base: "300px", md: "600px"}} p={0} mt={{base: "20px", md: undefined}}>
           <Image
             src={`https://${services[1].fields.image.fields.file.url}`}
             alt='service'

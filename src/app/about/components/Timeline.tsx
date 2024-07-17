@@ -15,14 +15,14 @@ const Timeline: FC<Timeline> = ({desc, isi, image, index}) => {
         <Box position='relative' padding='10'>
           <Divider />
           <AbsoluteCenter bg='black' px='4'>
-            <Text textColor={"white"}>{desc}</Text>
+            <Text textColor={"white"} fontSize={{base: "8px", md: "16px"}}>{desc}</Text>
           </AbsoluteCenter>
         </Box>
-        <Grid templateColumns={"repeat(2, 1fr)"} >
+        <Grid templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)"}} >
           <Container alignContent={"center"}>
-            <Text textColor={"gray"} fontSize={"24px"}>{isi}</Text>
+            <Text textColor={"gray"} fontSize={{base: "12px", md: "24px"}} py={"8px"}>{isi}</Text>
           </Container>
-          <Container w={"560px"} h={"600px"} p={0}>
+          <Container w={{base: "280px", md: "560px"}} h={{base: "300px", md: "600px"}} p={0} py={"8px"}>
             <Image
               src={`https://${image}`}
               alt='foto'
@@ -40,11 +40,11 @@ const Timeline: FC<Timeline> = ({desc, isi, image, index}) => {
         <Box position='relative' padding='10'>
           <Divider />
           <AbsoluteCenter bg='black' px='4'>
-            <Text textColor={"white"}>{desc}</Text>
+            <Text textColor={"white"} fontSize={{base: "8px", md: "16px"}}>{desc}</Text>
           </AbsoluteCenter>
         </Box>
-        <Grid templateColumns={"repeat(2, 1fr)"}>
-          <Container w={"560px"} h={"600px"} p={0}>
+        <Grid templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)"}} py={"12px"}>
+          <Container w={{base: "280px", md: "560px"}} h={{base: "300px", md: "600px"}} p={0} py={"8px"}>
             <Image
               src={`https://${image}`}
               alt='foto'
@@ -54,7 +54,7 @@ const Timeline: FC<Timeline> = ({desc, isi, image, index}) => {
             />
           </Container>
           <Container alignContent={"center"}>
-            <Text textColor={"gray"} fontSize={"24px"}>{isi}</Text>
+            <Text textColor={"gray"} fontSize={{base: "12px", md: "24px"}} py={"8px"}>{isi}</Text>
           </Container>
         </Grid>
       </>

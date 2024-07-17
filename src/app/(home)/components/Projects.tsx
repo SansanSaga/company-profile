@@ -14,7 +14,7 @@ type Projects = {
 
 const Projects: FC<Projects> = ({ projects }) => {
   return (
-    <Container maxW={"1920px"} bgColor={"gray"} p={"40px"} alignContent={"center"} pb={"80px"}>
+    <Container maxW={{base: "360px", md: "1920px"}} bgColor={"gray"} p={"40px"} alignContent={"center"} pb={"80px"}>
       <Container 
         bgColor={"dimgray"} 
         textAlign={"center"} 
@@ -23,11 +23,11 @@ const Projects: FC<Projects> = ({ projects }) => {
         borderRadius={"16px"}
         border={"1px solid black"}
       >
-        <Text fontSize={"40px"} textColor={"whitesmoke"}>
+        <Text fontSize={{base: "20px", md: "40px"}} textColor={"white"}>
           Projects and Commentaries
         </Text>
       </Container>
-      <Grid templateColumns={`repeat(3, 1fr)`}>
+      <Grid templateColumns={{base: "repeat(1, 1fr)", md: `repeat(3, 1fr)`}} gap={{base: "20px", md: undefined}}>
         {projects.map((project, index) => {
           return (
             <Container 

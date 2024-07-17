@@ -1,21 +1,22 @@
 import { Box, Container, Grid, Text } from '@chakra-ui/react'
+import ShareButtons from './ShareButtons'
 // import ShareButtons from './ShareButtons'
 
 const Footer = () => {
   return (
-    <Container maxW={"1920px"} bgColor={"lightgray"}>
-      <Grid justifyContent={'space-between'} templateColumns={"repeat(2, 1fr)"}>
-        <Grid templateColumns={"repeat(2, 1fr"}>
-          <Text>PT Azimuth Pastindo Mandiri</Text>
-          <Box>
-            <Text>Jl. Inspeksi Kalimalang No.160,</Text>
-            <Text>Gandasari, Cikarang Barat,</Text>
-            <Text>Kab.Bekasi 17350, Jawa Barat,</Text>
-            <Text>Indonesia</Text>
+    <Container maxW={{base: "360px", md: "1920px"}} bgColor={"lightgray"} px={"48px"} py={"20px"}>
+      <Grid templateColumns={"repeat(2, 1fr)"}>
+        <Grid templateColumns={"repeat(2, 1fr)"}>
+          <Text fontSize={{base: "8px", md: "16px"}} alignSelf={"center"}>PT Azimuth Pastindo Mandiri</Text>
+          <Box alignContent={"center"}>
+            <Text fontSize={{base: "8px", md: "16px"}}>Jl. Inspeksi Kalimalang No.160,</Text>
+            <Text fontSize={{base: "8px", md: "16px"}}>Gandasari, Cikarang Barat,</Text>
+            <Text fontSize={{base: "8px", md: "16px"}}>Kab.Bekasi 17350, Jawa Barat,</Text>
+            <Text fontSize={{base: "8px", md: "16px"}}>Indonesia</Text>
           </Box>
         </Grid>
-        <Container>
-          {/* <ShareButtons /> */}
+        <Container textAlign={"right"} alignContent={"center"}>
+          <ShareButtons title={"PT Azimuth"}/>
         </Container>
       </Grid>
     </Container>
